@@ -5,7 +5,7 @@ import { createUnzip } from 'node:zlib';
 
 const decompress = async () => {
     const inputPath = pathResolve('../../zip/files/archive.gz');
-    const outputPath = pathResolve('../../zip/files/fileToCompress.txt');
+    const outputPath = pathResolve('../../zip/files/fileToCompress2.txt');
     
     pipeline(
         createReadStream(inputPath),
