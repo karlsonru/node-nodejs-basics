@@ -1,8 +1,12 @@
 const parseEnv = () => {
+    let s = '';
     for (const env in process.env) {
         if (!env.startsWith('RSS_')) continue;
-        console.log(`${env}=${process.env[env]};`);
+        s += `${env}=${process.env[env]}; `;
     }
+    return s.slice(0, -2);
 };
 
-parseEnv();
+const s = parseEnv();
+
+console.log(s);
