@@ -34,8 +34,7 @@ const performCalculations = async () => {
         ))
     }
 
-    const result = await Promise.all(arr);
-    console.log(result);
+    (await Promise.allSettled(arr)).forEach((promise) => console.log(promise.value));
 };
 
 await performCalculations();
